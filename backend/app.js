@@ -10,6 +10,7 @@ const mongoose=require('mongoose');
 const cors=require('cors');
 const config=require('./config');
 
+//Declare Prefix Routers
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -40,6 +41,7 @@ app.use(cookieParser());
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Prefix Routers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
