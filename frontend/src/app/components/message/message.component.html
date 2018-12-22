@@ -1,3 +1,8 @@
-<p>
-  message works!
-</p>
+<div *ngIf="data.message">
+
+  <div class="alert" role="alert" [ngClass]="{'alert-success': data.messageType == 'success' }" [ngClass]="{'alert-danger': data.messageType == 'danger' }">
+    {{ data.message }}
+  </div>
+    
+ 
+</div>
