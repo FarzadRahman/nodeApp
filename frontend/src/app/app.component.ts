@@ -18,4 +18,11 @@ export class AppComponent {
     localStorage.clear();
     this.router.navigate(['']);
   }
+
+  isLogin(){
+    if (localStorage.getItem('token')==null){
+      return false;
+    }
+    return true;
+  }
 }
